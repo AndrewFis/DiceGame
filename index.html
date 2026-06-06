@@ -1367,12 +1367,22 @@ border-radius: 10px;
   }
 
   /* Hide desktop header and side panels on phones */
-  .topbar,
-  .side,
-  .header-box,
-  .box-card {
-    display: none !important;
-  }
+.topbar,
+.header-box,
+.box-card {
+  display: none !important;
+}
+
+.side {
+  display: grid !important;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.side .panel:nth-child(3),
+.side .panel:nth-child(4) {
+  display: none !important;
+}
 
   .layout {
     display: block;
