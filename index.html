@@ -1287,70 +1287,17 @@ padding: 7px;
 border-radius: 10px;
 }
 }
-  @media (max-height: 900px) {
-  .app {
-    transform: scale(.85);
-  }
-}
-
-@media (max-height: 800px) {
-  .app {
-    transform: scale(.75);
-  }
-}
-
-@media (max-height: 700px) {
-  .app {
-    transform: scale(.65);
-  }
-}
-
-@media (max-height: 600px) {
-  .app {
-    transform: scale(.55);
-  }
-}
-  html, body {
+html, body {
   width: 100%;
   overflow-x: hidden;
 }
 
+/* PHONE / TABLET OPTIMIZED GAME LAYOUT */
 @media (max-width: 900px) {
-  .app {
-    width: calc(100% - 12px);
-    padding: 10px 0;
-  }
-
-  .topbar {
-    gap: 8px;
-  }
-
-  .layout {
-    gap: 10px;
-  }
-
-  .side {
-    display: none;
-  }
-
-  .board-band {
-    min-height: auto;
-  }
-
-  .board {
-    width: min(100%, 460px);
-  }
-
-  .header-box {
-    display: none;
-  }
-}
-  /* PHONE-OPTIMIZED GAME LAYOUT */
-@media (max-width: 700px) {
   html,
   body {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow-x: hidden;
   }
 
@@ -1366,63 +1313,57 @@ border-radius: 10px;
     transform: none !important;
   }
 
-  /* Hide desktop header and side panels on phones */
-.header-box,
-.box-card,
-.brand {
-  display: none !important;
-}
+  .brand,
+  .header-box,
+  .box-card {
+    display: none !important;
+  }
 
-.topbar {
-  display: block !important;
-  margin-bottom: 6px;
-}
+  .topbar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 6px;
+  }
 
-.match-score {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-  min-width: 0;
-  border-radius: 6px;
-}
+  .match-score {
+    display: grid !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    width: 100%;
+    min-width: 0;
+    border-radius: 6px;
+  }
 
-.score-card,
-.target-card {
-  min-height: 34px;
-  padding: 4px 6px;
-  border-right: 0;
-}
+  .score-card,
+  .target-card {
+    display: grid !important;
+    min-height: 34px;
+    padding: 4px 6px;
+    border-right: 0;
+  }
 
-.score-card span,
-.target-card span {
-  font-size: 0.55rem;
-}
+  .score-card span,
+  .target-card span {
+    font-size: 0.55rem;
+  }
 
-.score-card strong {
-  font-size: 1rem;
-}
+  .score-card strong {
+    font-size: 1rem;
+  }
 
-.target-card {
-  grid-column: 1 / 3;
-  grid-template-columns: 42px 1fr;
-}
+  .target-card {
+    grid-column: 1 / 3;
+    grid-template-columns: 42px 1fr;
+  }
 
-.target-select,
-.custom-target {
-  min-height: 28px;
-  font-size: 0.78rem;
-}
-
-.side {
-  display: grid !important;
-  gap: 6px;
-  margin-top: 6px;
-}
-
-.side .panel:nth-child(3),
-.side .panel:nth-child(4) {
-  display: none !important;
-}
+  .target-select,
+  .custom-target {
+    min-height: 28px;
+    font-size: 0.78rem;
+  }
 
   .layout {
     display: block;
@@ -1497,14 +1438,6 @@ border-radius: 10px;
     border-width: 5px;
     padding: 6px;
     gap: 6px;
-    box-shadow:
-      inset 0 0 0 2px rgba(255, 255, 255, 0.18),
-      0 8px 0 rgba(57, 32, 16, 0.5),
-      0 14px 18px rgba(41, 23, 12, 0.25);
-  }
-
-  .cell {
-    border-radius: 6px;
   }
 
   .cell .die {
@@ -1512,22 +1445,6 @@ border-radius: 10px;
     padding: 5px;
     border-radius: 10px;
     --pip-size: 7px;
-  }
-
-  .tray {
-    border-radius: 6px;
-  }
-
-  .tray-head {
-    padding: 5px;
-  }
-
-  .tray-name {
-    font-size: 0.78rem;
-  }
-
-  .tray-goal {
-    display: none;
   }
 
   .dice-pool {
@@ -1569,11 +1486,6 @@ border-radius: 10px;
     line-height: 1.2;
   }
 
-  .dot {
-    width: 12px;
-    height: 12px;
-  }
-
   .controls {
     grid-template-columns: 1fr 1fr;
     gap: 5px;
@@ -1593,16 +1505,52 @@ border-radius: 10px;
     font-size: 0.72rem;
   }
 
-  .music-control span {
-    font-size: 0.62rem;
+  .side {
+    display: grid !important;
+    gap: 6px;
+    margin-top: 6px;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
-  .intro-overlay {
+  .side .panel:nth-child(3),
+  .side .panel:nth-child(4) {
+    display: none !important;
+  }
+
+  .side .panel-inner {
     padding: 8px;
   }
 
-  .intro-card {
+  .round-score {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .round-card {
+    padding: 8px;
+  }
+
+  .round-card strong {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    margin-bottom: 5px;
+    font-size: 0.68rem;
+  }
+
+  .mode-grid {
     gap: 8px;
+  }
+
+  .mode-button {
+    min-height: 34px;
+    font-size: 0.78rem;
+  }
+
+  .mode-note {
+    display: none;
   }
 
   .intro-logo {
@@ -1611,10 +1559,6 @@ border-radius: 10px;
 
   .box-button img {
     width: min(78vw, 320px);
-  }
-
-  .intro-card p {
-    font-size: 0.9rem;
   }
 }
 </style>
