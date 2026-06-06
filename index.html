@@ -1367,10 +1367,50 @@ border-radius: 10px;
   }
 
   /* Hide desktop header and side panels on phones */
-.topbar,
 .header-box,
-.box-card {
+.box-card,
+.brand {
   display: none !important;
+}
+
+.topbar {
+  display: block !important;
+  margin-bottom: 6px;
+}
+
+.match-score {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  min-width: 0;
+  border-radius: 6px;
+}
+
+.score-card,
+.target-card {
+  min-height: 34px;
+  padding: 4px 6px;
+  border-right: 0;
+}
+
+.score-card span,
+.target-card span {
+  font-size: 0.55rem;
+}
+
+.score-card strong {
+  font-size: 1rem;
+}
+
+.target-card {
+  grid-column: 1 / 3;
+  grid-template-columns: 42px 1fr;
+}
+
+.target-select,
+.custom-target {
+  min-height: 28px;
+  font-size: 0.78rem;
 }
 
 .side {
