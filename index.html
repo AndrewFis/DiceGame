@@ -53,6 +53,7 @@ cursor: pointer;
 width: min(1220px, calc(100% - 28px));
 margin: 0 auto;
 padding: 24px 0 34px;
+transform-origin: top center;
 }
 
 .topbar {
@@ -1285,6 +1286,29 @@ padding: 6px;
 padding: 7px;
 border-radius: 10px;
 }
+}
+  @media (max-height: 900px) {
+  .app {
+    transform: scale(.85);
+  }
+}
+
+@media (max-height: 800px) {
+  .app {
+    transform: scale(.75);
+  }
+}
+
+@media (max-height: 700px) {
+  .app {
+    transform: scale(.65);
+  }
+}
+
+@media (max-height: 600px) {
+  .app {
+    transform: scale(.55);
+  }
 }
   html, body {
   width: 100%;
