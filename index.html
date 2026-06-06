@@ -41,7 +41,6 @@ font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 body.intro-active {
 overflow: hidden;
-overflow-x: auto;
 }
 
 button {
@@ -1286,6 +1285,41 @@ padding: 6px;
 padding: 7px;
 border-radius: 10px;
 }
+}
+  html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .app {
+    width: calc(100% - 12px);
+    padding: 10px 0;
+  }
+
+  .topbar {
+    gap: 8px;
+  }
+
+  .layout {
+    gap: 10px;
+  }
+
+  .side {
+    display: none;
+  }
+
+  .board-band {
+    min-height: auto;
+  }
+
+  .board {
+    width: min(100%, 460px);
+  }
+
+  .header-box {
+    display: none;
+  }
 }
 </style>
 </head>
