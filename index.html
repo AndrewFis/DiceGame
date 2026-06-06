@@ -1345,6 +1345,228 @@ border-radius: 10px;
     display: none;
   }
 }
+  /* PHONE-OPTIMIZED GAME LAYOUT */
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100svh;
+  }
+
+  .app {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 4px;
+    transform: none !important;
+  }
+
+  /* Hide desktop header and side panels on phones */
+  .topbar,
+  .side,
+  .header-box,
+  .box-card {
+    display: none !important;
+  }
+
+  .layout {
+    display: block;
+    width: 100%;
+  }
+
+  .game {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .board-band {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    min-height: auto;
+    padding: 6px;
+  }
+
+  .board-band::before {
+    display: none;
+  }
+
+  .board-wrap {
+    order: 1;
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .black-rail {
+    order: 2;
+  }
+
+  .white-rail {
+    order: 3;
+  }
+
+  .status-row {
+    display: grid;
+    gap: 3px;
+  }
+
+  .badge {
+    min-height: 24px;
+    padding: 3px 8px;
+    font-size: 0.72rem;
+  }
+
+  .message {
+    font-size: 0.74rem;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .coin-strip {
+    min-height: 28px;
+    gap: 6px;
+  }
+
+  .coin {
+    width: 28px;
+    height: 28px;
+    flex-basis: 28px;
+  }
+
+  .coin-copy {
+    font-size: 0.72rem;
+  }
+
+  .board {
+    width: min(94vw, 330px);
+    border-width: 5px;
+    padding: 6px;
+    gap: 6px;
+    box-shadow:
+      inset 0 0 0 2px rgba(255, 255, 255, 0.18),
+      0 8px 0 rgba(57, 32, 16, 0.5),
+      0 14px 18px rgba(41, 23, 12, 0.25);
+  }
+
+  .cell {
+    border-radius: 6px;
+  }
+
+  .cell .die {
+    width: min(100%, 64px);
+    padding: 5px;
+    border-radius: 10px;
+    --pip-size: 7px;
+  }
+
+  .tray {
+    border-radius: 6px;
+  }
+
+  .tray-head {
+    padding: 5px;
+  }
+
+  .tray-name {
+    font-size: 0.78rem;
+  }
+
+  .tray-goal {
+    display: none;
+  }
+
+  .dice-pool {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    padding: 5px;
+  }
+
+  .die-button {
+    min-height: 44px;
+    border-radius: 6px;
+  }
+
+  .die {
+    width: min(100%, 46px);
+    padding: 5px;
+    border-width: 2px;
+    border-radius: 10px;
+    --pip-size: 6px;
+  }
+
+  .turn-card {
+    padding: 6px;
+  }
+
+  .turn-title {
+    display: none;
+  }
+
+  .turn-player {
+    margin-bottom: 3px;
+    font-size: 0.86rem;
+  }
+
+  .selected-copy {
+    min-height: auto;
+    font-size: 0.72rem;
+    line-height: 1.2;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 6px;
+  }
+
+  .primary,
+  .secondary {
+    min-height: 36px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .music-control {
+    min-height: 36px;
+    padding: 3px 6px;
+    font-size: 0.72rem;
+  }
+
+  .music-control span {
+    font-size: 0.62rem;
+  }
+
+  .intro-overlay {
+    padding: 8px;
+  }
+
+  .intro-card {
+    gap: 8px;
+  }
+
+  .intro-logo {
+    width: min(82vw, 330px);
+  }
+
+  .box-button img {
+    width: min(78vw, 320px);
+  }
+
+  .intro-card p {
+    font-size: 0.9rem;
+  }
+}
 </style>
 </head>
 <body class="intro-active">
